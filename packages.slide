@@ -1,0 +1,214 @@
+continue
+Core Packages
+
+* strconv
+
+* func Itoa(n int) string
+
+.play -numbers 01-itoa.go /START OMIT/,/END OMIT/
+
+* func Atoi(s string) (int, error)
+
+.play -numbers 02-atoi.go /START OMIT/,/END OMIT/
+
+* FormatInt(i int64, base int) string
+
+.play -numbers 03-format-int.go /START OMIT/,/END OMIT/
+
+* func ParseInt(s string, base int, bitSize int) (i int64, err error)
+
+.play -numbers 03.1-parse-int.go /START OMIT/,/END OMIT/
+
+* func FormatBool(b bool) string
+
+.play -numbers 04-format-bool.go /START OMIT/,/END OMIT/
+
+* func func ParseBool(str string) (bool, error)
+
+.play -numbers 04.1-parse-bool.go /START OMIT/,/END OMIT/
+
+* func FormatFloat(f float64, fmt byte, prec, bitSize int) string
+
+.play -numbers 05-format-float.go /START OMIT/,/END OMIT/
+
+* func ParseFloat(s string, bitSize int) (float64, error)
+
+.play -numbers 05.1-parse-float.go /START OMIT/,/END OMIT/
+
+* FormatUint(i int64, base int) string
+
+.play -numbers 06-format-uint.go /START OMIT/,/END OMIT/
+
+* func ParseUint(s string, base int, bitSize int) (i int64, err error)
+
+.play -numbers 06.1-parse-uint.go /START OMIT/,/END OMIT/
+
+* func Quote(s string) string
+
+.play -numbers 07-quote.go /START OMIT/,/END OMIT/
+
+* func Unquote(s string) (string, error)
+
+.play -numbers 07.1-unquote.go /START OMIT/,/END OMIT/
+
+* func QuoteRune(r rune) string
+
+.play -numbers 08-quoterune.go /START OMIT/,/END OMIT/
+
+* func UnquoteChar(s string, quote byte) (value rune, multibyte bool, tail string, err error)
+
+.play -numbers 08.1-unquotechar.go /START OMIT/,/END OMIT/
+
+* http
+
+* func (c *Client) Do(req *Request) (*Response, error)
+
+.play -numbers 09-do.go /START OMIT/,/END OMIT/
+
+* func (r *Request) SetBasicAuth(username, password string)
+
+.play -numbers 09.1-do.go /START OMIT/,/END OMIT/
+
+* func Get(url string) (resp *Response, err error)
+
+.play -numbers 10-http.go /START OMIT/,/END OMIT/
+
+* func Post(url, contentType string, body io.Reader) (resp *Response, err error)
+
+.play -numbers 11-post.go /START OMIT/,/END OMIT/
+
+
+* func PostForm(url string, data url.Values) (resp *Response, err error)
+
+.play -numbers 12-options.go /START OMIT/,/END OMIT/
+
+* TLS
+
+.play -numbers 13-tls.go /START OMIT/,/END OMIT/
+
+* Response
+
+.play -numbers 14-body.go /START OMIT/,/END OMIT/
+
+* Response
+
+.play -numbers 14.1-response.go /START OMIT/,/END OMIT/
+
+* ServerMux
+
+.play -numbers 15-mux.go /START OMIT/,/END OMIT/
+
+* Handler
+
+.play -numbers 16-handler.go /START OMIT/,/END OMIT/
+
+* Request
+
+.play -numbers 17-request.go /START OMIT/,/END OMIT/
+
+* Request
+
+.play -numbers 17.1-request.go /START OMIT/,/END OMIT/
+
+* Request
+
+.play -numbers 17.2-request.go /START OMIT/,/END OMIT/
+
+* Request
+
+.play -numbers 17.3-request.go /START OMIT/,/END OMIT/
+
+* Request
+
+.play -numbers 17.4-request.go /START OMIT/,/END OMIT/
+
+* ResponseWriter
+
+.play -numbers 18-response.go /START OMIT/,/END OMIT/
+
+* io
+
+* Main interfaces
+
+.play -numbers 20-reader.go /START OMIT/,/END OMIT/
+
+* func CopyN(dst Writer, src Reader, n int64) (written int64, err error)
+
+.play -numbers 21-copyn.go /START OMIT/,/END OMIT/
+
+* func Copy(dst Writer, src Reader) (written int64, err error)
+
+.play -numbers 22-copy.go /START OMIT/,/END OMIT/
+
+* func Pipe() (*PipeReader, *PipeWriter)
+
+.play -numbers 23-pipe.go /START OMIT/,/END OMIT/
+
+* func ReadAtLeast(r Reader, buf []byte, min int) (n int, err error)
+
+.play -numbers 24-readatleast.go /START OMIT/,/END OMIT/
+
+* func ReadFull(r Reader, buf []byte) (n int, err error)
+
+.play -numbers 25-readfull.go /START OMIT/,/END OMIT/
+
+* func WriteString(w Writer, s string) (n int, err error)
+
+.play -numbers 26-writestring.go /START OMIT/,/END OMIT/
+
+* SectionReader
+
+.play -numbers 27-section.go /START OMIT/,/END OMIT/
+
+* ioutil
+
+* func ReadAll(r io.Reader) ([]byte, error)
+
+.play -numbers 28-readall.go /START OMIT/,/END OMIT/
+
+* func ReadFile(filename string) ([]byte, error)
+
+.play -numbers 29-readfile.go /START OMIT/,/END OMIT/
+
+* func ReadDir(dirname string) ([]os.FileInfo, error)
+
+.play -numbers 30-readdir.go /START OMIT/,/END OMIT/
+
+* func TempFile(dir, pattern string) (f *os.File, err error)
+
+.play -numbers 31-tempfile.go /START OMIT/,/END OMIT/
+
+* filepath
+
+* func Dir(path string) string
+
+.play -numbers 32-dir.go /START OMIT/,/END OMIT/
+
+* func Ext(path string) string
+
+.play -numbers 33-ext.go /START OMIT/,/END OMIT/
+
+* func Join(elem ...string) string
+
+.play -numbers 34-join.go /START OMIT/,/END OMIT/
+
+* func Clean(path string) string
+
+.play -numbers 35-clean.go /START OMIT/,/END OMIT/
+
+* func Rel(basepath, targpath string) (string, error)
+
+.play -numbers 36-rel.go /START OMIT/,/END OMIT/
+
+* func Abs(path string) (string, error)
+
+.play -numbers 37-abs.go /START OMIT/,/END OMIT/
+
+* func Split(path string) (dir, file string)
+
+.play -numbers 38-split.go /START OMIT/,/END OMIT/
+
+* func Walk(root string, walkFn WalkFunc) error
+
+.play -numbers 39-walk.go /START OMIT/,/END OMIT/
+
